@@ -37,9 +37,9 @@ public class MarkdownParseTest {
 
     @Test
     public void testFile4() throws IOException {
-        String contents = Files.readString(Path.of("./test-file-3.md"));
+        String contents = Files.readString(Path.of("./test-file-4.md"));
         ArrayList<String> testList = new ArrayList<>();
-        testList.add("Parenthesis() in list");
+        testList.add("something.com");
         assertEquals(testList, MarkdownParse.getLinks(contents));
     }
     
