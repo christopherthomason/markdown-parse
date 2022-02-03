@@ -10,7 +10,7 @@ import java.util.List;
 public class MarkdownParseTest {
     @Test
     public void addition() {
-        assertEquals(99999, 1 + 1);
+        assertEquals(2, 1 + 1);
     }
 
     @Test
@@ -32,6 +32,14 @@ public class MarkdownParseTest {
     public void testFile3() throws IOException {
         String contents = Files.readString(Path.of("./test-file-3.md"));
         ArrayList<String> testList = new ArrayList<>();
+        assertEquals(testList, MarkdownParse.getLinks(contents));
+    }
+
+    @Test
+    public void testFile4() throws IOException {
+        String contents = Files.readString(Path.of("./test-file-3.md"));
+        ArrayList<String> testList = new ArrayList<>();
+        testList.add("Parenthesis() in list");
         assertEquals(testList, MarkdownParse.getLinks(contents));
     }
     
