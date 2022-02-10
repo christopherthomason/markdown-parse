@@ -29,5 +29,5 @@ jobs:
       - name: Compile and run our JUnit tests, also test out echo
         run: |
           echo The directory is: $GITHUB_WORKSPACE
-          make tests
+          make test
 
